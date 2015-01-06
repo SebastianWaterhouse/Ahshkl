@@ -1,16 +1,26 @@
-import ahshklterraingeneration, ahshklbodyparts, ahshklobjects, random
+import ahshklterraingeneration as tege
+import ahshklbodyparts as bopa
+import ahshklobjects as obje
+import time
 
-Standing="standing up"
-LyingDown="lying down"
-Grass = "grassy area"
-Snow = "snowy area"
 
-positionChose = LyingDown
-choosePosition = random.randint(1, 2)
-if choosePosition==2:
-	positionChose = Standing
-landChose = Snow
-chooseLand = random.randint(1, 2)
-if chooseLand==2:
-	landChose = Grass
+goto = raw_input("Do you want to access tege, bopa, or obje? ")
+if goto == "tege":
+	selffile = tege
+	print("Nothing here for now!")
+if goto == "bopa":
+	selffile = bopa.bodyParts
+	bopaToAccess = raw_input("What body part do you want? ")
+	if bopaToAccess == "getList":
+		print(str(selffile.__subclasses__()))
+	if bopaToAccess in str(selffile.__subclasses__()):
+		selfbopa = selffile.toAccess
+		print("You have accessed" + str(selfbopa))
+if goto == "obje":
+	print("Nothing here for now!")
 
+
+
+
+
+print("Have a nice day!")
