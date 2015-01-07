@@ -37,16 +37,13 @@ Made code that was unelegant and broken.
 Planned Next Update
 ===================
 CAUTION: May change, little chance of doing so, as by the time it is here, I have already started working on it
-Body parts and objects, tier system for body parts.
+Either more body parts or object rendering
 
 Supah Dupah Sneek Peek!
 =======================
 CAUTION: SUBJECT TO EXTREME CHANGE
 
-Add more body parts and objects!
-
-REALLY REALLY UNSTABLE POSSIBILITIES FOR SOON(ish)
-Framework for bopa combinations to create
+T2 Bopas?
 
 Credits
 =======
