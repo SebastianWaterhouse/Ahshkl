@@ -10,10 +10,15 @@ I started this project when I wanted to kill a monster in a video game by pourin
 Source Code Jargon
 ==================
 Bopa: Body Part(s)
+
 Tege: Terrain Generation
+
 Obje: Object(s)
+
 Orcl: Original Class
+
 Disu: Direct Subclasses
+
 T2, 3, etc.: Tier 2, 3, etc.
 
 Changelog
