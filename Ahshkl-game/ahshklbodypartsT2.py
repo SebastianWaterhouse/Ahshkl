@@ -1,1 +1,0 @@
-#Can't be implemented until good object rendering is in
