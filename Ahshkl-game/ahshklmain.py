@@ -1,7 +1,11 @@
 import ahshklterraingeneration as tege
 import ahshklbodyparts as bopa
 import ahshklobjects as obje
+import ahshklbodypartsT2 as bopaT2
 import time
+
+
+###Made by Sebastian W.###
 
 
 goto = raw_input("Do you want to access tege, bopa, or obje? ")
@@ -22,5 +26,5 @@ if goto == "obje":
 
 
 
-
 print("Have a nice day!")
+print("Exited with code 0")
