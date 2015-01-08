@@ -5,7 +5,7 @@ Pythonic procedurally-generated object-based text-based adventure game. (Want an
 
 About
 =====
-I started this project when I wanted to kill a monster in a video game by pouring cement in it's mouth. I then evolved the idea to be able to do anything. Not "Anything" minecraft-style, but actually anything.
+I started this project when I wanted to kill a monster in a video game by pouring cement in it's mouth.
 
 The game is created by basic shapes called body parts combining to make more complex shapes, and so on, to make functional objects that are used in creatures/props which are used in creating scenes which progress Zork-like. (Look it up if you haven't played it. Zork is THE text-based adventure game)
 
