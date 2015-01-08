@@ -1,6 +1,8 @@
+import assets.bopas.ahshklbodyparts.bodyParts as bopa
 #import
 
-#What on earth to do for this?
+import random
+
 
 #WIP
-#class
+#class objectRenderer(object):
