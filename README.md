@@ -25,6 +25,9 @@ T2, 3, etc.: Tier 2, 3, etc.
 
 Changelog
 =========
+AHSHKL 0.0.0.4:
+Added organization, moved files
+
 AHSHKL 0.0.0.3:
 Added basic shape bodyparts
 

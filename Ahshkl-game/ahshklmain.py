@@ -1,7 +1,7 @@
 import ahshklterraingeneration as tege
-import ahshklbodyparts as bopa
-import ahshklobjects as obje
-import ahshklbodypartsT2 as bopaT2
+import assets.bopas.ahshklbodyparts as bopa
+import assets.objects.ahshklobjects as obje
+import assets.bopas.ahshklbodypartsT2 as bopaT2
 import time
 
 
@@ -17,7 +17,7 @@ if goto == "bopa":
 	bopaToAccess = raw_input("What body part do you want? ")
 	if bopaToAccess == "getList":
 		print(str(selffile.__subclasses__()))
-	if bopaToAccess in str(selffile.__subclasses__()):
+	if bopaToAccess in str(selffile.__class__.__subclasses__()):
 		selfbopa = selffile.toAccess
 		print("You have accessed" + str(selfbopa))
 if goto == "obje":

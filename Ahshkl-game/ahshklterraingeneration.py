@@ -1,8 +1,7 @@
-import assets.bopas.ahshklbodyparts.bodyParts as bopa
+import assets.bopas.ahshklbodyparts as bopa
 #import
 
 import random
 
-
 #WIP
-#class objectRenderer(object):
+#class terrainGenerator(object):
