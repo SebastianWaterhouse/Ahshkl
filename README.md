@@ -40,13 +40,13 @@ Made code that was unelegant and broken.
 Planned Next Update
 ===================
 CAUTION: May change, little chance of doing so, as by the time it is here, I have already started working on it
-Either more body parts or object rendering
+Object parser!
 
 Supah Dupah Sneek Peek!
 =======================
 CAUTION: SUBJECT TO EXTREME CHANGE
 
-T2 Bopas?
+Help me decide! Snap-point-based complex bopas, or start work on attributes?
 
 Credits
 =======

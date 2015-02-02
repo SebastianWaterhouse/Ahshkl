@@ -2,4 +2,5 @@
 
 #WIP
 class dimensionOne(object):
-	pass
+	class sky1:
+		color = [0, 179, 255]
