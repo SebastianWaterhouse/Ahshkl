@@ -19,15 +19,13 @@ if 1:
 		if toCall == "help":
 			print("List of bopas are as follows: " + str(bopasubsnames))
 			sys.exit("Exited with code 0")
-		print("Welcome to the debug object parser interface. This is a demo of a " + getattr(bopa, toCall).shapename)
-		sentence = ("There is " + getattr(bopa, toCall).sentencename  + " with codename of " + getattr(bopa, toCall).codeName + " and a build ID of " + str(getattr(bopa, toCall).bID))
+		calling = getattr(bopas, toCall)
+		print("Welcome to the debug object parser interface. This is a demo of a " + getattr(bopas, toCall).shapename)
+		sentence = ("There is " + calling.sentencename  + " with codename of " + calling.codeName + " and a build ID of " + str(calling.bID))
 		print(sentence)
 	except AttributeError:
-		print("Error! Invalid class! Class '" + toCall + "' not found in class bodyParts")
+		print("Error! Invalid class! Class '" + toCall + "' not found in " + str(bopas))
 		sys.exit("Exiting with code 1")
-
-
-
 
 
 
