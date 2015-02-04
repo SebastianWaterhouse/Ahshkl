@@ -13,7 +13,7 @@ bopasubsnames = ([bopasubc.__name__ for bopasubc in vars()['bopa'].__subclasses_
 
 toCall = "ding-o"
 
-toCall = raw_input("Please enter class name of object to test (Help function WIP): ")
+toCall = raw_input("Please enter class name of object to test (Help function activated by typing 'help'): ")
 if 1:
 	try:
 		if toCall == "help":
