@@ -13,7 +13,7 @@ bopa = bopas.bodyParts
 
 toCall = "ding-o"
 
-toCall = raw_input("Please enter class name of object to test (Help function WIP): "
+toCall = raw_input("Please enter class name of object to test (Help function WIP): ")
 if 1:
 	try:
 		print("Welcome to the debug object parser interface. This is a demo of a " + getattr(bopa, toCall).shapename)
