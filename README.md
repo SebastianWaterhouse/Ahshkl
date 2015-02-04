@@ -27,6 +27,9 @@ T2, 3, etc.: Tier 2, 3, etc.
 
 Changelog
 =========
+AHSHKL 0.0.0.5:
+Minor fixes, start work on sentence parser. Exception handling.
+
 AHSHKL 0.0.0.4:
 Added organization, moved files
 
@@ -44,7 +47,7 @@ Planned Next Update
 CAUTION: May change, little chance of doing so, as by the time it is here, I have already started working on it
 Object parser!
 
-Supah Dupah Sneek Peek!
+Super Duper Sneek Peek!
 =======================
 CAUTION: SUBJECT TO EXTREME CHANGE
 
