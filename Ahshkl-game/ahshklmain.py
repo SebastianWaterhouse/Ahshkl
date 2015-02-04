@@ -8,14 +8,17 @@ import time, sys
 
 ###Made by Sebastian W.###
 
-bopa = bopas.bodyParts
-
+bopa = bopas.bodyPart
+bopasubsnames = ([bopasubc.__name__ for bopasubc in vars()['bopa'].__subclasses__()])
 
 toCall = "ding-o"
 
 toCall = raw_input("Please enter class name of object to test (Help function WIP): ")
 if 1:
 	try:
+		if toCall == "help":
+			print("List of bopas are as follows: " + str(bopasubsnames))
+			sys.exit("Exited with code 0")
 		print("Welcome to the debug object parser interface. This is a demo of a " + getattr(bopa, toCall).shapename)
 		sentence = ("There is " + getattr(bopa, toCall).sentencename  + " with codename of " + getattr(bopa, toCall).codeName + " and a build ID of " + str(getattr(bopa, toCall).bID))
 		print(sentence)
