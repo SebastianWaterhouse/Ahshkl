@@ -27,6 +27,9 @@ T2, 3, etc.: Tier 2, 3, etc.
 
 Changelog
 =========
+AHSHKL 0.0.0.6:
+Changed how the bopas file is built, made fancy help function.
+
 AHSHKL 0.0.0.5:
 Minor fixes, start work on sentence parser. Exception handling.
 
