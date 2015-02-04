@@ -13,14 +13,14 @@ bopa = bopas.bodyParts
 
 toCall = "ding-o"
 
-toCall = raw_input("Please enter class name of object to test: ")
-if True:
+toCall = raw_input("Please enter class name of object to test (Help function WIP): "
+if 1:
 	try:
 		print("Welcome to the debug object parser interface. This is a demo of a " + getattr(bopa, toCall).shapename)
 		sentence = ("There is " + getattr(bopa, toCall).sentencename  + " with codename of " + getattr(bopa, toCall).codeName + " and a build ID of " + str(getattr(bopa, toCall).bID))
 		print(sentence)
 	except AttributeError:
-		print("Error! Invalid class! Class " + toCall + " not found in class bodyParts")
+		print("Error! Invalid class! Class '" + toCall + "' not found in class bodyParts")
 		sys.exit("Exiting with code 1")
 
 
