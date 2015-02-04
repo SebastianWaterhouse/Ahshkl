@@ -15,6 +15,8 @@ Bopa: Body Part(s)
 
 Tege: Terrain Generation
 
+Sepa: Sentence Parser
+
 Obje: Object(s)
 
 Orcl: Original Class
