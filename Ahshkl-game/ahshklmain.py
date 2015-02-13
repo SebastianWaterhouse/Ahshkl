@@ -20,7 +20,7 @@ if 1:
 			print("List of bopas are as follows: " + str(bopasubsnames))
 			sys.exit("Exited with code 0")
 		calling = getattr(bopas, toCall)
-		print("Welcome to the debug object parser interface. This is a demo of a " + getattr(bopas, toCall).shapename + ". Caps have been added to all fields for emphasis. In normal gameplay it is capitalized properly.")
+		print("Welcome to the debug object parser interface. This is a demo of a " + calling.shapename + ". Caps have been added to all fields for emphasis. In normal gameplay it is capitalized properly.")
 		sentence = ("There is a " + calling.sentencename.upper()  + " with codename of " + calling.codeName.upper() + ", a build ID of " + str(calling.bID) + " and a size unit of " + str(calling.size_unit))
 		time.sleep(4)
 		print(sentence)
