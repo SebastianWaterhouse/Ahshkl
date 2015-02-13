@@ -21,7 +21,7 @@ if 1:
 			sys.exit("Exited with code 0")
 		calling = getattr(bopas, toCall)
 		print("Welcome to the debug object parser interface. This is a demo of a " + getattr(bopas, toCall).shapename)
-		sentence = ("There is " + calling.sentencename  + " with codename of " + calling.codeName + " and a build ID of " + str(calling.bID))
+		sentence = ("There is a " + calling.sentencename  + " with codename of " + calling.codeName + ", a build ID of " + str(calling.bID) + " and a size unit of " + str(calling.size_unit))
 		print(sentence)
 	except AttributeError:
 		print("Error! Invalid class! Class '" + toCall + "' not found in " + str(bopas))
