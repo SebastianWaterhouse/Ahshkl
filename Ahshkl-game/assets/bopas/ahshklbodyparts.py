@@ -36,7 +36,7 @@ class sphere1(bodyPart):
 	codeName = "smallSphere1"
 	shapename = "sphere"
 	size_unit = 0.5
-class semicircle1(bodyPart)
+class semicircle1(bodyPart):
 	bID = 31
 	sentencename = "small semi circle"
 	codeName = "smallSemiCircle1"
