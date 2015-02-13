@@ -13,19 +13,20 @@ bopasubsnames = ([bopasubc.__name__ for bopasubc in vars()['bopa'].__subclasses_
 
 toCall = "ding-o"
 
-toCall = raw_input("Please enter class name of object to test (Help function activated by typing 'help'): ")
+toCall = raw_input("Please enter class name of object to test (Help function activated by typing 'help'): ").lower()
 if 1:
 	try:
 		if toCall == "help":
 			print("List of bopas are as follows: " + str(bopasubsnames))
 			sys.exit("Exited with code 0")
 		calling = getattr(bopas, toCall)
-		print("Welcome to the debug object parser interface. This is a demo of a " + getattr(bopas, toCall).shapename)
-		sentence = ("There is a " + calling.sentencename  + " with codename of " + calling.codeName + ", a build ID of " + str(calling.bID) + " and a size unit of " + str(calling.size_unit))
+		print("Welcome to the debug object parser interface. This is a demo of a " + getattr(bopas, toCall).shapename + ". Caps have been added to all fields for emphasis. In normal gameplay it is capitalized properly.")
+		sentence = ("There is a " + calling.sentencename.upper()  + " with codename of " + calling.codeName.upper() + ", a build ID of " + str(calling.bID) + " and a size unit of " + str(calling.size_unit))
+		time.sleep(4)
 		print(sentence)
 	except AttributeError:
-		print("Error! Invalid class! Class '" + toCall + "' not found in " + str(bopas))
-		sys.exit("Exiting with code 1")
+		print("Error! Invalid class! Class '" + toCall + "' not found in file ahshklbodyparts.py")
+		sys.exit("Exiting with code AttributeError")
 
 
 
