@@ -7,6 +7,7 @@ class bodyPart(object):
 	codeName="UNSET"
 	shapename="UNSET"
 	size_unit = 0.5
+	atma = "UNSET"
 	def get_sentence_name(self):
 		return self.sentencename
 	def get_code_name(self):
