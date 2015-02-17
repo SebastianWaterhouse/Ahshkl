@@ -1,3 +1,7 @@
 class MaterialAttributes(object):
-	pass
-	#Will work on soon
+	adjective = "UNSET"
+	codeName = "UNSET"
+
+class attributeWood(MaterialAttributes):
+	adjective = "wooden"
+	codeName = "attributeWooden"

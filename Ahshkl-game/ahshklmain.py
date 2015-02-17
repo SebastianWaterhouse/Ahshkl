@@ -2,6 +2,7 @@ import ahshklterraingeneration as tege
 import assets.bopas.ahshklbodyparts as bopas
 import assets.objects.ahshklobjects as obje
 import assets.bopas.ahshklbodypartsT2 as bopasT2
+import assets.bopas.attributes.attributesMaterial as atmas
 
 import time, sys
 
@@ -32,7 +33,8 @@ if 1:
 				sys.exit("Exited with code AttributeError")
 		calling = getattr(bopas, toCall)
 		print("Welcome to the debug object parser interface. This is a demo of a " + calling.shapename + ". Caps have been added to all fields for emphasis. In normal gameplay it is capitalized properly.")
-		sentence = ("There is a " + calling.sentencename.upper()  + " with codename of " + calling.codeName.upper() + ", a build ID of " + str(calling.bID) + " and a size unit of " + str(calling.size_unit))
+		calling.atma = atmas.attributeWood.adjective
+		sentence = ("There is a " + calling.sentencename.upper()  + " with codename of " + calling.codeName.upper() + ", a build ID of " + str(calling.bID) + "a size unit of " + str(calling.size_unit) + ", and an atma of " + calling.atma.upper())
 		time.sleep(4)
 		print(sentence)
 	except AttributeError:
