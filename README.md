@@ -27,6 +27,9 @@ T2, 3, etc.: Tier 2, 3, etc.
 
 Changelog
 =========
+AHSHKL 0.0.0.7:
+Initial sarting framework of atmas
+
 AHSHKL 0.0.0.6.5:
 Great improvements overall, start adding in atma, added debug function in debug interface
 
