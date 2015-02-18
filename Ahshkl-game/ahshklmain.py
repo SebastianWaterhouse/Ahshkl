@@ -34,8 +34,10 @@ while 1:
 			print("Commands are: help, exit, create. Use help [command] for a detailed description of a command")
 	if command_split[0]=="exit":
 		sys.exit("Exited with code 0")
+		success = 1
 	if command_split[0]=="create":
 		print("Create is not yet implemented. Please try again in next version.")
+		success = 1
 	if success==0:
 		print("I don't know what you mean yet. Please file an issue ticket.")
 	success=0
