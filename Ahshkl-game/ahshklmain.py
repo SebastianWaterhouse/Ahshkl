@@ -36,7 +36,8 @@ while 1:
 		sys.exit("Exited with code 0")
 		success = 1
 	if command_split[0]=="create":
-		print("Create is not yet implemented. Please try again in next version.")
+		to_create=raw_input("Create a ")
+		print("You create a " + getattr(bopas, to_create).sentencename)
 		success = 1
 	if success==0:
 		print("I don't know what you mean yet. Please file an issue ticket.")
