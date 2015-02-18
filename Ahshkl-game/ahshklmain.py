@@ -13,39 +13,31 @@ bopa = bopas.bodyPart
 bopasubsnames = ([bopasubc.__name__ for bopasubc in vars()['bopa'].__subclasses__()])
 atma = atmas.MaterialAttributes
 atmasubsnames = ([atmasubc.__name__ for atmasubc in vars()['atma'].__subclasses__()])
+success=0
 
-toCall = "ding-o"
+print("Hi, welcome to Ahshkl. Please enter a command or enter help for a list of commands. Capitalization does not matter.")
+while 1:
+	command=raw_input("Enter Command: ").lower()
+	command_split=command.split()
+	if command_split[0]=="help":
+		success=1
+		try:
+			if command_split[1]=="help":
+				print("Help gives a list of commands. To use help on a specific command, do help [command]")
+			elif command_split[1]=="exit":
+				print("Exit exits the game.")
+			elif command_split[1]=="create":
+				print("Create is not yet implemented")
+			else:
+				print("Oops! That is not a valid command.")
+		except IndexError:
+			print("Commands are: help, exit, create. Use help [command] for a detailed description of a command")
+	if command_split[0]=="exit":
+		sys.exit("Exited with code 0")
+	if command_split[0]=="create":
+		print("Create is not yet implemented. Please try again in next version.")
+	if success==0:
+		print("I don't know what you mean yet. Please file an issue ticket.")
+	success=0
 
-toCall = raw_input("Please enter class name of object to test followed by name of atma to use (Help function activated by typing 'help'): ").lower()
-toCall = toCall.split()
-if 1:
-	try:
-		if toCall[0] == "help":
-			print("List of bopas are as follows: " + str(bopasubsnames) + " and the atmas are: " + str(atmasubsnames))
-			sys.exit("Exited with code 0")
-		if toCall[0] == "enterdebug":
-			toDo = raw_input("Welcome to debug. Please enter what you would like to do: ")
-			try:
-				print(eval(toDo))
-				sys.exit("Exited with code 0")
-			except NameError:
-				print("Error! " + toDo + " is not defined! Check your spelling and make sure it exists!")
-				sys.exit("Exited with code NameError")
-			except AttributeError:
-				print("Error! " + toDo[0] + " appears to not be a class! Check your spelling and make sure it exists!")
-				sys.exit("Exited with code AttributeError")
-		calling = getattr(bopas, toCall[0])
-		callingatma = getattr(atmas, toCall[1])
-		print("Welcome to the debug object parser interface. This is a demo of a " + calling.shapename + ". Caps have been added to all fields for emphasis. In normal gameplay it is capitalized properly.")
-		calling.atma = callingatma.adjective
-		sentence = ("There is a " + calling.sentencename.upper()  + " with codename of " + calling.codeName.upper() + ", a build ID of " + str(calling.bID) + ", a size unit of " + str(calling.size_unit) + ", and an atma of " + calling.atma.upper())
-		time.sleep(1.5)
-		print(sentence)
-	except AttributeError:
-		print("Error! Invalid class! Class '" + toCall[0] + "' or " + toCall[1] + "not found in file ahshklbodyparts.py or attributesMaterial.py, respectively")
-		sys.exit("Exiting with code AttributeError")
-
-
-
-print("Have a nice day!")
 print("Exited with code 0")
