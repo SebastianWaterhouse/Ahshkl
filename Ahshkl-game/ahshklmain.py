@@ -14,7 +14,7 @@ bopasubsnames = ([bopasubc.__name__ for bopasubc in vars()['bopa'].__subclasses_
 atma = atmas.MaterialAttributes
 atmasubsnames = ([atmasubc.__name__ for atmasubc in vars()['atma'].__subclasses__()])
 success=0
-itemcount=0
+itemcount=1
 
 print("Hi, welcome to Ahshkl. Please enter a command or enter help for a list of commands. Capitalization does not matter.")
 while 1:
@@ -29,10 +29,12 @@ while 1:
 				print("Exit exits the game.")
 			elif command_split[1]=="create":
 				print("Create lets you enter a bopa that you would like to create, enter help to get a list of bopas.")
+			elif command_split[1]=="interact":
+				print("Interact lets you interact with a created object, say, item1, item2, etc.")
 			else:
 				print("Oops! That is not a valid command.")
 		except IndexError:
-			print("Commands are: help, exit, create. Use help [command] for a detailed description of a command")
+			print("Commands are: help, exit, create, interact. Use help [command] for a detailed description of a command")
 	if command_split[0]=="exit":
 		sys.exit("Exited with code 0")
 		success = 1
@@ -57,6 +59,7 @@ while 1:
 		success = 1
 	if command_split[0]=="eval":
 		print(eval(raw_input("Eval ")))
+		success = 1
 	if success==0:
 		print("I don't know what you mean yet. Please file an issue ticket.")
 	success=0
