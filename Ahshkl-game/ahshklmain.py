@@ -27,7 +27,7 @@ while 1:
 			elif command_split[1]=="exit":
 				print("Exit exits the game.")
 			elif command_split[1]=="create":
-				print("Create is not yet implemented")
+				print("Create lets you enter a bopa that you would like to create, enter help to get a list of bopas.")
 			else:
 				print("Oops! That is not a valid command.")
 		except IndexError:
@@ -37,8 +37,15 @@ while 1:
 		success = 1
 	if command_split[0]=="create":
 		to_create=raw_input("Create a ")
-		print("You create a " + getattr(bopas, to_create).sentencename)
-		success = 1
+		if to_create == "help":
+			print("Bopas are: " + str(bopasubsnames))
+			success = 1
+		if success == 0:
+			try:
+				print("You create a " + getattr(bopas, to_create).sentencename)
+			except AttributeError:
+				print("Oops! " + to_create + " is not a valid bopa.")
+			success = 1
 	if success==0:
 		print("I don't know what you mean yet. Please file an issue ticket.")
 	success=0
