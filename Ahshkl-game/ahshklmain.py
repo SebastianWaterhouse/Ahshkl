@@ -14,6 +14,7 @@ bopasubsnames = ([bopasubc.__name__ for bopasubc in vars()['bopa'].__subclasses_
 atma = atmas.MaterialAttributes
 atmasubsnames = ([atmasubc.__name__ for atmasubc in vars()['atma'].__subclasses__()])
 success=0
+itemcount=0
 
 print("Hi, welcome to Ahshkl. Please enter a command or enter help for a list of commands. Capitalization does not matter.")
 while 1:
@@ -43,9 +44,19 @@ while 1:
 		if success == 0:
 			try:
 				print("You create a " + getattr(bopas, to_create).sentencename)
+				exec('item'+str(itemcount) + '= getattr(bopas, to_create)')
+				itemcount = itemcount+1
 			except AttributeError:
 				print("Oops! " + to_create + " is not a valid bopa.")
 			success = 1
+	if command_split[0]=="interact":
+		interact_with=raw_input("Interact with ")
+		print("You interact with a " + getattr(eval(interact_with), 'sentencename'))
+	if command_split[0]=="no":
+		print("What are you trying to accomplish by saying that?")
+		success = 1
+	if command_split[0]=="eval":
+		print(eval(raw_input("Eval ")))
 	if success==0:
 		print("I don't know what you mean yet. Please file an issue ticket.")
 	success=0
