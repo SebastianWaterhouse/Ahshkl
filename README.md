@@ -54,17 +54,17 @@ Removed nonfunctional code
 AHSHKL 0.0.0:
 Made code that was unelegant and broken.
 
-Planned Next Update
-===================
-CAUTION: May change
+Planned Features
+================
+Game
 
-???
+Recipes
 
-Super Duper Sneek Peek!
-=======================
-CAUTION: SUBJECT TO EXTREME CHANGE
+More attributes
 
-???
+Terrain generation
+
+
 
 Credits
 =======
