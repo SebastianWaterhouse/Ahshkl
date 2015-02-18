@@ -27,7 +27,7 @@ T2, 3, etc.: Tier 2, 3, etc.
 
 Changelog
 =========
-AHSHKL 0.0.0.8:
+AHSHKL 0.0.1.0:
 Re-done interface
 
 AHSHKL 0.0.0.7:
