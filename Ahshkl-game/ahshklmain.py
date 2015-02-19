@@ -58,6 +58,8 @@ while 1:
 				to_create_4 = raw_input("Please enter the shapename: ")
 				to_create_5 = raw_input("Please enter the size_unit: ")
 				to_create_6 = raw_input("Please enter the atma: ")
+				to_name = raw_input("Please name your bopa: ")
+				exec(to_name + " = bodyPart(" + to_create_2 ", " + to_create_3 + ", " + to_create_4 + ", " + to_create_5 + ", " + to_create_6)
 			success = 1
 		if command_split[0]=="interact":
 			interact_with=raw_input("Interact with ")
