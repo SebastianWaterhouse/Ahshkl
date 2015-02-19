@@ -71,6 +71,8 @@ while 1:
 			success = 1
 		if success==0:
 			print("I don't know what you mean yet. Please file an issue ticket.")
+	except NameError:
+		print("Oops! I don't know what that is yet! Please file an issue ticket.")
 	except IndexError:
 		pass
 	success=0
