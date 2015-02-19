@@ -17,7 +17,7 @@ success=0
 itemcount=1
 
 
-print("Hi, welcome to Ahshkl. Please enter a command or enter help for a list of commands. Capitalization does not matter.")
+print("Hi, welcome to Ahshkl. Please enter a command or enter help for a list of commands. Capitalization does not matter. Cube and sphere are pre-loaded in here by default under the names 'cube' and 'sphere', respectively.")
 while 1:
 	command=raw_input("Enter Command: ").lower()
 	command_split=command.split()
@@ -69,6 +69,10 @@ while 1:
 		if command_split[0]=="eval":
 			print(eval(raw_input("Eval ")))
 			success = 1
+		if command_split[0]=="look":
+			for obj in gc.get_objects():
+				if isinstance(obj, bopa):
+					print(obj.shapename)
 		if success==0:
 			print("I don't know what you mean yet. Please file an issue ticket.")
 	except NameError:
