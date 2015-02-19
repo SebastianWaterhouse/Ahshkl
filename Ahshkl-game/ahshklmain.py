@@ -15,6 +15,7 @@ atma = atmas.MaterialAttributes
 atmasubsnames = ([atmasubc.__name__ for atmasubc in vars()['atma'].__subclasses__()])
 success=0
 itemcount=1
+debug = False
 
 print("Hi, welcome to Ahshkl. Please enter a command or enter help for a list of commands. Capitalization does not matter. Cube and sphere are pre-loaded in here by default under the names 'cube' and 'sphere', respectively.")
 while 1:
@@ -75,10 +76,16 @@ while 1:
 				if isinstance(obj, bopa):
 					print(obj.shapename)
 			success = 1
+		if command_split[0]=="debug":
+			if debug == False:
+				debug = True
+			if debug == True:
+				debug = False
 		if success==0:
 			print("I don't know what you mean yet. Please file an issue ticket.")
-	except NameError:
-		print("Oops! I don't know what that means yet. Please file an issue ticket.")
+	if debug == False
+		except NameError:
+			print("Oops! I don't know what that means yet. Please file an issue ticket.")
 	except IndexError:
 		pass
 	success=0
