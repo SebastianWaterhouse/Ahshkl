@@ -29,7 +29,7 @@ while 1:
 				elif command_split[1]=="exit":
 					print("Exit exits the game.")
 				elif command_split[1]=="create":
-					print("Create lets you enter a bopa that you would like to create, enter help to get a list of bopas.")
+					print("Create lets you enter a bopa that you would like to create. You can choose between pre-made bopas or make your own bopa.")
 				elif command_split[1]=="interact":
 					print("Interact lets you interact with a created object.")
 				else:
@@ -74,6 +74,7 @@ while 1:
 			for obj in gc.get_objects():
 				if isinstance(obj, bopa):
 					print(obj.shapename)
+			success = 1
 		if success==0:
 			print("I don't know what you mean yet. Please file an issue ticket.")
 	except NameError:
