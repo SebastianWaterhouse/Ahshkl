@@ -76,6 +76,8 @@ while 1:
 					print(obj.shapename)
 		if success==0:
 			print("I don't know what you mean yet. Please file an issue ticket.")
+	except NameError:
+		print("Oops! I don't know what that means yet. Please file an issue ticket.")
 	except IndexError:
 		pass
 	success=0
