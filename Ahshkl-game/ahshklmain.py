@@ -4,7 +4,7 @@ import assets.objects.ahshklobjects as obje
 import assets.bopas.ahshklbodypartsT2 as bopasT2
 import assets.bopas.attributes.attributesMaterial as atmas
 
-import time, sys
+import time, sys, gc
 
 
 ###Made by Sebastian W.###
@@ -15,6 +15,7 @@ atma = atmas.MaterialAttributes
 atmasubsnames = ([atmasubc.__name__ for atmasubc in vars()['atma'].__subclasses__()])
 success=0
 itemcount=1
+
 
 print("Hi, welcome to Ahshkl. Please enter a command or enter help for a list of commands. Capitalization does not matter.")
 while 1:
@@ -31,7 +32,7 @@ while 1:
 				elif command_split[1]=="create":
 					print("Create lets you enter a bopa that you would like to create, enter help to get a list of bopas.")
 				elif command_split[1]=="interact":
-					print("Interact lets you interact with a created object, say, item1, item2, etc.")
+					print("Interact lets you interact with a created object.")
 				else:
 					print("Oops! That is not a valid command.")
 			except IndexError:
@@ -40,18 +41,24 @@ while 1:
 			sys.exit("Exited with code 0")
 			success = 1
 		if command_split[0]=="create":
-			to_create=raw_input("Create a ")
-			if to_create == "help":
-				print("Bopas are: " + str(bopasubsnames))
-				success = 1
-			if success == 0:
-				try:
-					print("You create a " + getattr(bopas, to_create).sentencename)
-					exec('item'+str(itemcount) + '= getattr(bopas, to_create)')
-					itemcount = itemcount+1
-				except AttributeError:
-					print("Oops! " + to_create + " is not a valid bopa.")
-				success = 1
+			to_create_1=raw_input("Build your own (own) or use a prebuilt bopa (pre)?: ").lower()
+			if to_create_1 == "pre":
+				to_create_2=raw_input("Which would you like? Say help for a list of bopas: ")
+				if to_create_2=="help":
+					for obj in gc.get_objects():
+						if isinstance(obj, bopa):
+							print(obj.shapename)
+					success = 1
+				if success == 0:
+					to_name=raw_input("What do you want to name this?: ")
+					exec(to_name + "=" + 'bopas.' + str(to_create_2))
+			if to_create_1 == "own":
+				to_create_2 = raw_input("Please enter the sentencename: ")
+				to_create_3 = raw_input("Please enter the codeName: ")
+				to_create_4 = raw_input("Please enter the shapename: ")
+				to_create_5 = raw_input("Please enter the size_unit: ")
+				to_create_6 = raw_input("Please enter the atma: ")
+			success = 1
 		if command_split[0]=="interact":
 			interact_with=raw_input("Interact with ")
 			print("You interact with a " + getattr(eval(interact_with), 'sentencename'))
@@ -64,8 +71,6 @@ while 1:
 			success = 1
 		if success==0:
 			print("I don't know what you mean yet. Please file an issue ticket.")
-	except NameError:
-		print("I don't know what that is yet! Please file an issue ticket.")
 	except IndexError:
 		pass
 	success=0
