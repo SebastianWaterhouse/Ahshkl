@@ -20,48 +20,54 @@ print("Hi, welcome to Ahshkl. Please enter a command or enter help for a list of
 while 1:
 	command=raw_input("Enter Command: ").lower()
 	command_split=command.split()
-	if command_split[0]=="help":
-		success=1
-		try:
-			if command_split[1]=="help":
-				print("Help gives a list of commands. To use help on a specific command, do help [command]")
-			elif command_split[1]=="exit":
-				print("Exit exits the game.")
-			elif command_split[1]=="create":
-				print("Create lets you enter a bopa that you would like to create, enter help to get a list of bopas.")
-			elif command_split[1]=="interact":
-				print("Interact lets you interact with a created object, say, item1, item2, etc.")
-			else:
-				print("Oops! That is not a valid command.")
-		except IndexError:
-			print("Commands are: help, exit, create, interact. Use help [command] for a detailed description of a command")
-	if command_split[0]=="exit":
-		sys.exit("Exited with code 0")
-		success = 1
-	if command_split[0]=="create":
-		to_create=raw_input("Create a ")
-		if to_create == "help":
-			print("Bopas are: " + str(bopasubsnames))
-			success = 1
-		if success == 0:
+	try:
+		if command_split[0]=="help":
+			success=1
 			try:
-				print("You create a " + getattr(bopas, to_create).sentencename)
-				exec('item'+str(itemcount) + '= getattr(bopas, to_create)')
-				itemcount = itemcount+1
-			except AttributeError:
-				print("Oops! " + to_create + " is not a valid bopa.")
+				if command_split[1]=="help":
+					print("Help gives a list of commands. To use help on a specific command, do help [command]")
+				elif command_split[1]=="exit":
+					print("Exit exits the game.")
+				elif command_split[1]=="create":
+					print("Create lets you enter a bopa that you would like to create, enter help to get a list of bopas.")
+				elif command_split[1]=="interact":
+					print("Interact lets you interact with a created object, say, item1, item2, etc.")
+				else:
+					print("Oops! That is not a valid command.")
+			except IndexError:
+				print("Commands are: help, exit, create, interact. Use help [command] for a detailed description of a command")
+		if command_split[0]=="exit":
+			sys.exit("Exited with code 0")
 			success = 1
-	if command_split[0]=="interact":
-		interact_with=raw_input("Interact with ")
-		print("You interact with a " + getattr(eval(interact_with), 'sentencename'))
-	if command_split[0]=="no":
-		print("What are you trying to accomplish by saying that?")
-		success = 1
-	if command_split[0]=="eval":
-		print(eval(raw_input("Eval ")))
-		success = 1
-	if success==0:
-		print("I don't know what you mean yet. Please file an issue ticket.")
+		if command_split[0]=="create":
+			to_create=raw_input("Create a ")
+			if to_create == "help":
+				print("Bopas are: " + str(bopasubsnames))
+				success = 1
+			if success == 0:
+				try:
+					print("You create a " + getattr(bopas, to_create).sentencename)
+					exec('item'+str(itemcount) + '= getattr(bopas, to_create)')
+					itemcount = itemcount+1
+				except AttributeError:
+					print("Oops! " + to_create + " is not a valid bopa.")
+				success = 1
+		if command_split[0]=="interact":
+			interact_with=raw_input("Interact with ")
+			print("You interact with a " + getattr(eval(interact_with), 'sentencename'))
+			success = 1
+		if command_split[0]=="no":
+			print("What are you trying to accomplish by saying that?")
+			success = 1
+		if command_split[0]=="eval":
+			print(eval(raw_input("Eval ")))
+			success = 1
+		if success==0:
+			print("I don't know what you mean yet. Please file an issue ticket.")
+	except NameError:
+		print("I don't know what that is yet! Please file an issue ticket.")
+	except IndexError:
+		pass
 	success=0
 
 print("Exited with code 0")
