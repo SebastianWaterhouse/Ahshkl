@@ -20,7 +20,6 @@ cube = bopas.cube
 sphere = bopas.sphere
 
 print("Hi, welcome to Ahshkl. Please enter a command or enter help for a list of commands. Capitalization does not matter. Cube and sphere are pre-loaded in here by default under the names 'cube' and 'sphere', respectively.")
-while 1:
 	command=raw_input("Enter Command: ").lower()
 	command_split=command.split()
 	try:
@@ -37,10 +36,12 @@ while 1:
 					print("Interact lets you interact with a created object.")
 				elif command_split[1]=="look":
 					print("Look lets you see loaded bopas available for manipulation/interaction")
+				elif command_split[1]=="destroy":
+					print("Destroy lets you destroy a bopa. WARNING: This is final and if it is a custom bopa, you must enter all attributes all over again. SECOND WARNING: Does not destroy pre-built bopas!")
 				else:
 					print("Oops! That is not a valid command.")
 			except IndexError:
-				print("Commands are: help, exit, create, interact, look. Use help [command] for a detailed description of a command")
+				print("Commands are: help, exit, create, interact, look, destroy. Use help [command] for a detailed description of a command")
 		if command_split[0]=="exit":
 			sys.exit("Exited with code 0")
 			success = 1
@@ -85,6 +86,12 @@ while 1:
 				debug = True
 			if debug == True:
 				debug = False
+		if command_split[0]=="destroy":
+			to_destroy=raw_input("Destroy what?: ")
+			destroying = eval(to_destroy)
+			del destroying
+			print(to_destroy + " destroyed successfully")
+			success = 1
 		if success==0:
 			print("I don't know what you mean yet. Please file an issue ticket.")
 	except NameError:
