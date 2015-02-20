@@ -16,6 +16,8 @@ atmasubsnames = ([atmasubc.__name__ for atmasubc in vars()['atma'].__subclasses_
 success=0
 itemcount=1
 debug = False
+cube = bopas.cube
+sphere = bopas.sphere
 
 print("Hi, welcome to Ahshkl. Please enter a command or enter help for a list of commands. Capitalization does not matter. Cube and sphere are pre-loaded in here by default under the names 'cube' and 'sphere', respectively.")
 while 1:
@@ -33,10 +35,12 @@ while 1:
 					print("Create lets you enter a bopa that you would like to create. You can choose between pre-made bopas or make your own bopa.")
 				elif command_split[1]=="interact":
 					print("Interact lets you interact with a created object.")
+				elif command_split[1]=="look":
+					print("Look lets you see loaded bopas available for manipulation/interaction")
 				else:
 					print("Oops! That is not a valid command.")
 			except IndexError:
-				print("Commands are: help, exit, create, interact. Use help [command] for a detailed description of a command")
+				print("Commands are: help, exit, create, interact, look. Use help [command] for a detailed description of a command")
 		if command_split[0]=="exit":
 			sys.exit("Exited with code 0")
 			success = 1
@@ -83,9 +87,8 @@ while 1:
 				debug = False
 		if success==0:
 			print("I don't know what you mean yet. Please file an issue ticket.")
-	if debug == False
-		except NameError:
-			print("Oops! I don't know what that means yet. Please file an issue ticket.")
+	except NameError:
+		print("Oops! I don't know what that means yet. Please file an issue ticket.")
 	except IndexError:
 		pass
 	success=0
