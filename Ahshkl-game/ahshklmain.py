@@ -20,6 +20,7 @@ cube = bopas.cube
 sphere = bopas.sphere
 
 print("Hi, welcome to Ahshkl. Please enter a command or enter help for a list of commands. Capitalization does not matter. Cube and sphere are pre-loaded in here by default under the names 'cube' and 'sphere', respectively.")
+while 1:
 	command=raw_input("Enter Command: ").lower()
 	command_split=command.split()
 	try:
