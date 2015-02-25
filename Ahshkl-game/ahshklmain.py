@@ -19,6 +19,7 @@ debug = False
 cube = bopas.cube
 sphere = bopas.sphere
 
+
 print("Hi, welcome to Ahshkl. Please enter a command or enter help for a list of commands. Capitalization does not matter. Cube and sphere are pre-loaded in here by default under the names 'cube' and 'sphere', respectively.")
 while 1:
 	to_create_2 = 'nil'
@@ -52,10 +53,13 @@ while 1:
 				to_create_1 = command_split[1]
 				try:
 					to_create_2 = command_split[2]
-				except IndexError:
+				except IndexError as e:
 					print("Continuing")
+					done1 = True
+					raise e
 			except IndexError:
-				to_create_1=raw_input("Build your own (own) or use a prebuilt bopa (pre)?: ").lower()
+				if done1 == False:
+					to_create_1=raw_input("Build your own (own) or use a prebuilt bopa (pre)?: ").lower()
 			if to_create_1 == "pre":
 				if to_create_2 == 'nil':
 					to_create_2=raw_input("Which would you like? Say help for a list of bopas: ")
@@ -67,14 +71,14 @@ while 1:
 				if success == 0:
 					to_name=raw_input("What do you want to name this?: ")
 					exec(to_name + "=" + 'bopas.' + str(to_create_2))
-				if to_create_1 == "own":
-					to_create_2 = raw_input("Please enter the sentencename: ")
-					to_create_3 = raw_input("Please enter the codeName: ")
-					to_create_4 = raw_input("Please enter the shapename: ")
-					to_create_5 = raw_input("Please enter the size_unit: ")
-					to_create_6 = raw_input("Please enter the atma: ")
-					to_name = raw_input("Please name your bopa: ")
-					exec(to_name + " = bopa('" + str(to_create_2) + "', '" + str(to_create_3) + "', '" + str(to_create_4) + "', '" + str(to_create_5) + "', '" + str(to_create_6) + "')")
+			if to_create_1 == "own":
+				to_create_2 = raw_input("Please enter the sentencename: ")
+				to_create_3 = raw_input("Please enter the codeName: ")
+				to_create_4 = raw_input("Please enter the shapename: ")
+				to_create_5 = raw_input("Please enter the size_unit: ")
+				to_create_6 = raw_input("Please enter the atma: ")
+				to_name = raw_input("Please name your bopa: ")
+				exec(to_name + " = bopa('" + str(to_create_2) + "', '" + str(to_create_3) + "', '" + str(to_create_4) + "', '" + str(to_create_5) + "', '" + str(to_create_6) + "')")
 			success = 1
 		if command_split[0]=="interact":
 			interact_with=raw_input("Interact with ")
@@ -83,13 +87,10 @@ while 1:
 		if command_split[0]=="no":
 			print("What are you trying to accomplish by saying that?")
 			success = 1
-		if command_split[0]=="eval":
-			print(eval(raw_input("Eval ")))
-			success = 1
 		if command_split[0]=="look":
 			for obj in gc.get_objects():
 				if isinstance(obj, bopa):
-					print(obj.shapename)
+					print(obj.sentencename)
 			success = 1
 		if command_split[0]=="debug":
 			if debug == False:
@@ -102,6 +103,10 @@ while 1:
 			del destroying
 			print(to_destroy + " destroyed successfully")
 			success = 1
+		if debug == True:
+			if command_split[0]=="eval":
+				print(eval(raw_input("Eval ")))
+				success = 1
 		if success==0:
 			print("I don't know what you mean yet. Please file an issue ticket.")
 	except NameError:
@@ -109,6 +114,7 @@ while 1:
 	except IndexError:
 		pass
 	to_create_2 = 'nil'
+	done1 = False
 	success=0
 
 print("Exited with code 0")
