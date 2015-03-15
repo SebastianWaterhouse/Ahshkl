@@ -4,7 +4,7 @@ import weakref
 #WIP
 class bodyPart(object):
 	prebuiltbopas = []
-	def __init__(self, sentencename="UNSET", codeName="UNSET", shapename="UNSET", size_unit="UNSET", atma="UNSET"):
+	def __init__(self, sentencename="UNSET", shapename="UNSET", size_unit="UNSET", atma="UNSET"):
 		self.sentencename= sentencename
 		self.codeName= codeName
 		self.shapename= shapename
@@ -22,5 +22,5 @@ class bodyPart(object):
 	def get_size_unit(self):
 		return self.size_unit
 
-cube = bodyPart("cube", "cube1", "cube", "1", "UNSET")
-sphere = bodyPart("sphere", "sphere1", "sphere", "1", "UNSET")
+cube = bodyPart("cube", "cube", "1", "UNSET")
+sphere = bodyPart("sphere", "sphere", "1", "UNSET")

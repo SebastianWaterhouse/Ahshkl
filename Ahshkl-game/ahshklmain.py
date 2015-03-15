@@ -80,7 +80,6 @@ while 1:
 					exec(to_name + "=" + 'bopas.' + str(to_create_2))
 			if to_create_1 == "own":
 				to_create_2 = raw_input("Please enter the sentencename: ")
-				to_create_3 = raw_input("Please enter the codeName: ")
 				to_create_4 = raw_input("Please enter the shapename: ")
 				to_create_5 = raw_input("Please enter the size_unit: ")
 				to_create_6 = raw_input("Please enter the atma: ")
