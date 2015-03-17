@@ -9,6 +9,10 @@ I started this project when I wanted to kill a monster in a video game by pourin
 
 The game is created by basic shapes called body parts combining to make more complex shapes, and so on, to make functional objects that are used in creatures/props which are used in creating scenes which progress Zork-like.
 
+NEWS
+====
+Going through a huge change right now in Ahshkl, hereforth referred to as The Switch. The Switch is going to completely change how the command system works, at least back-end. The average user won't find anything different except severely limited/no command system during The Switch. Back-end however, I am adding in capability for mods better and completely changing how commands work.
+
 Source Code Jargon
 ==================
 Bopa: Body Part(s)
@@ -27,7 +31,10 @@ T2, 3, etc.: Tier 2, 3, etc.
 
 Changelog
 =========
-AHSHKL 0.0.1.1:
+AHSHKL 0.0.1.5:
+The Switch commencing. Expect limited/no commands until 0.0.2.0
+
+AHSHKL 0.0.1.2:
 Re-done how bopas work, re-done create command
 
 AHSHKL 0.0.1.0:
