@@ -1,4 +1,4 @@
-import assets.bopas.ahshklbodyparts as bopa
+import assets.main.bopas.ahshklbodyparts as bopa
 #import
 
 import random

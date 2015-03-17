@@ -6,7 +6,6 @@ class bodyPart(object):
 	prebuiltbopas = []
 	def __init__(self, sentencename="UNSET", shapename="UNSET", size_unit="UNSET", atma="UNSET"):
 		self.sentencename= sentencename
-		self.codeName= codeName
 		self.shapename= shapename
 		self.size_unit = size_unit
 		self.atma = atma
