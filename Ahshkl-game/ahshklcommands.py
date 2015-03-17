@@ -12,3 +12,7 @@ class ahshklCommands():
 		elif Debug == True:
 			Debug = False
 		print("Debug is now " + str(Debug))
+	if command_split[0]=="look":
+		for obj in gc.get_objects():
+			if isinstance(obj, bopa):
+				print(obj.sentencename)

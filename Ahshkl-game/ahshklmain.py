@@ -29,7 +29,7 @@ while 1:
 	command=raw_input("Enter Command: ").lower()
 	command_split=command.split()
 	try:
-		print("Hello! The Switch (refer to README for information) is in it's awkward stage. Nothing currently works. Come back next commit for extremely limited functionality!")
+		print("Hello! The Switch (refer to README for information) is in it's awkward stage. Nothing currently works. Come back at 0.0.1.7.5 for extremely limited functionality!")
 		sys.exit("Exited with code 0")
 		success = 1
 		if success == 0:
