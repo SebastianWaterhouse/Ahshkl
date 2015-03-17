@@ -27,10 +27,13 @@ Disu: Direct Subclasses
 
 Atma: Attribute: Material
 
-T2, 3, etc.: Tier 2, 3, etc.
+T2, T3, etc.: Tier 2, Tier 3, etc.
 
 Changelog
 =========
+AHSHKL 0.0.1.7.5:
+The Switch first part done. Onto the second!
+
 AHSHKL 0.0.1.5:
 The Switch commencing. Expect limited/no commands until 0.0.2.0
 
