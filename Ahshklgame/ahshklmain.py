@@ -1,11 +1,11 @@
-import ahshklterraingeneration as tege
-import ahshklcommands as comms
-import ahshklsettings as sett
-import assets.main.bopas.ahshklbodyparts as bopas
-import assets.main.objects.ahshklobjects as obje
-import assets.main.bopas.ahshklbodypartsT2 as bopasT2
-import assets.main.bopas.attributes.attributesMaterial as atmas
-from assets.mods import * as mods
+import devfiles.ahshklterraingeneration as tege
+import devfiles.ahshklcommands as comms
+import devfiles.ahshklsettings as sett
+import devfiles.assets.main.bopas.ahshklbodyparts as bopas
+import devfiles.assets.main.objects.ahshklobjects as obje
+import devfiles.assets.main.bopas.ahshklbodypartsT2 as bopasT2
+import devfiles.assets.main.bopas.attributes.attributesMaterial as atmas
+import devfiles.assets.mods.ahshklmod as mods
 
 import time, sys, gc
 
@@ -17,7 +17,7 @@ sett.init()
 to_create_2 = 'nil'
 to_name = 'nil'
 commands = comms.ahshklCommands.commands
-modmands = mods.ahshklCommands.commands
+modmands = mods.modCommands.commands
 e = NameError
 d = IndexError
 c = KeyboardInterrupt
@@ -30,12 +30,12 @@ while 1:
 	command_split=command.split()
 	try:
 		if command_split[0] in modmands:
-			commands[str(command_split[0])]()
+			modmands[str(command_split[0])]()
 			success = 1
-	try:
-		if command_split[0] in commands:
-			commands[str(command_split[0])]()
-			success = 1
+		if success == 0:
+			if command_split[0] in commands:
+				commands[str(command_split[0])]()
+				success = 1
 		if success == 0:
 			print("Oops! That was an invalid command. Please try again after The Switch.")
 	except e:

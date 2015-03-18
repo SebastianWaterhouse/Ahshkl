@@ -105,3 +105,11 @@ Sebastian W.
 				success = 1
 		if success==0:
 			print("I don't know what you mean yet. Please file an issue ticket.")
+
+		if success == 0:
+			print("Oops! That was an invalid command. Please try again after The Switch.")
+	except e:
+		print("Oops! I don't know what that means yet. Please file an issue ticket.")
+	to_create_2 = 'nil'
+	to_name = 'nil'
+	done1 = False
