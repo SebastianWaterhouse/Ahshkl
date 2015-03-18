@@ -2,7 +2,7 @@ from ... import ahshklsettings as sett
 
 class modCommands():
 	#For modders to place commands. PLEASE do not place in the ahshklcommands file.
-	def passs():
+	def passs(): #Delete this functions
 		print("Please delete")
 	commands = {
 	"pass":passs #Delete this line

@@ -1,4 +1,3 @@
-import ahshklterraingeneration as tege
 import ahshklcommands as comms
 import assets.main.bopas.ahshklbodyparts as bopas
 import assets.main.bopas.attributes.attributesMaterial as atmas
@@ -17,3 +16,13 @@ def init():
 	sphere = bopas.sphere
 	global mods
 	mods = assets.mods
+	global success
+	success = 0
+	global command_split
+	command_split = []
+	global done1
+	done1 = False
+	global to_create_2
+	to_create_2 = ''
+	global to_name
+	to_name = ''
