@@ -1,1 +1,4 @@
-Under here you can put your mod name as a .py file. Please notify Sebastian W. if you want a dedicated folder or more than one file.
+Please def commands under the modCommands class in ahshklmod. Note: This is only a temporary replacement for making your own files, don't worry. If  you do want your own file or even folder (gasp) please contact Sebastian W. via an issue report formatted this way:
+
+Title: REQUEST FOR MOD {File/Folder}: {Mod Name}
+Description: {What will your mod do? How much do you think your mod will be updated? Do you want your mod to be considered for integration in the main game (with credit, of course)?}

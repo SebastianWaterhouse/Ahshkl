@@ -12,7 +12,7 @@ class ahshklCommands():
 			sett.Debug = False
 		print("Debug is now " + str(sett.Debug))
 	def exit():
-		sys.exit("Exited with code 0")
+		sys.exit("Exited with code 0 (Command-Induced)")
 		success = 1
 	def look():
 		for obj in gc.get_objects():
