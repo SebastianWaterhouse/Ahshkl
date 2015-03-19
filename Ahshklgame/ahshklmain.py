@@ -27,7 +27,7 @@ def resetVars():
 	sett.to_create_5 = ''
 	to_name = ''
 
-print("Welcome to Ahshkl! Currently going through The Switch. Please read README.")
+print("Welcome to Ahshkl! Type in help or help [command] for information.")
 while 1:
 	command=raw_input("Enter Command: ").lower()
 	sett.command_split=command.split()
@@ -40,9 +40,9 @@ while 1:
 				commands[str(sett.command_split[0])]()
 				sett.success = 1
 		if sett.success == 0:
-			print("Oops! That was an invalid command. Please try again after The Switch.")
+			print("Oops! That was an invalid command. Please file a bug report or look at help.")
 	except sett.e:
-		"Oops! I don't know what that means! Please try again after The Switch."
+		"Oops! I don't know what that means! Please file a bug report or look at help."
 	except sett.d:
 		pass
 	except sett.c:

@@ -13,7 +13,7 @@ The game is created by basic shapes called body parts combining to make more com
 
 NEWS
 ====
-Going through a huge change right now in Ahshkl, hereforth referred to as The Switch. The Switch is going to completely change how the command system works, at least back-end. The average user won't find anything different except severely limited/no command system during The Switch. Back-end however, I am adding in capability for mods better and completely changing how commands work.
+The Switch is done! Wooooooooooooooooooooooooooooooooo!
 
 Source Code Jargon
 ==================
