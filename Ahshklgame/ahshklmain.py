@@ -18,6 +18,8 @@ commands = comms.ahshklCommands.commands
 modmands = mods.modCommands.commands
 
 def resetVars():
+	sett.command = ''
+	sett.command_split = ''
 	sett.done1 = False
 	sett.success = 0
 	sett.to_create_1 = ''
@@ -27,10 +29,11 @@ def resetVars():
 	sett.to_create_5 = ''
 	to_name = ''
 
-print("Welcome to Ahshkl! Type in help or help [command] for information.")
+print("Welcome to Ahshkl! Type in help or help [command] for infor
+mation.")
 while 1:
-	command=raw_input("Enter Command: ").lower()
-	sett.command_split=command.split()
+	sett.command=raw_input("Enter Command: ").lower()
+	sett.command_split=sett.command.split()
 	try:
 		if sett.command_split[0] in modmands:
 			modmands[str(sett.command_split[0])]()

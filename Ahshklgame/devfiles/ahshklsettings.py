@@ -18,6 +18,8 @@ def init():
 	mods = assets.mods
 	global success
 	success = 0
+	global command
+	command = ''
 	global command_split
 	command_split = []
 	global done1

@@ -1,4 +1,4 @@
-import time, sys, gc
+import time, sys, gc, inspect
 import ahshklsettings as sett
 import assets.main.bopas.ahshklbodyparts as bopas
 import ahshklplayer as play
@@ -74,7 +74,7 @@ class ahshklCommands(object):
 			sett.to_create_4 = raw_input("Please enter the size_unit: ")
 			sett.to_create_5 = raw_input("Please enter the atma: ")
 			sett.to_name = raw_input("Please name your bopa: ")
-			exec(sett.to_name + " = bopa('" + str(sett.to_create_2) + "', '" + str(sett.to_create_3) + "', '" + str(sett.to_create_4) + "', '" + str(sett.to_create_5) + "')")
+			exec(sett.to_name + " = sett.bopa('" + str(sett.to_create_2) + "', '" + str(sett.to_create_3) + "', '" + str(sett.to_create_4) + "', '" + str(sett.to_create_5) + "')")
 		sett.success = 1
 	def interact():
 		try:
@@ -82,7 +82,7 @@ class ahshklCommands(object):
 		except IndexError:
 			interact_with=raw_input("Interact with ")
 		finally:
-			print("You interact with a " + getattr((eval(interact_with)), 'atma') + " " + getattr((eval(interact_with)), 'sentencename'))
+			print("You interact with a " + getattr(comms, eval(interact_with)).atma + " " + getattr(comms, eval(interact_with)).sentencename)
 		sett.success = 1
 	def destroy():
 		if command_split[0]=="destroy":
