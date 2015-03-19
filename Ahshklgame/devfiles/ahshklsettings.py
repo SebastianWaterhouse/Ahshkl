@@ -22,7 +22,21 @@ def init():
 	command_split = []
 	global done1
 	done1 = False
+	global to_create_1
+	to_create_1 = ''
 	global to_create_2
 	to_create_2 = ''
+	global to_create_3
+	to_create_3 = ''
+	global to_create_4
+	to_create_4 = ''
+	global to_create_5
+	to_create_5 = ''
 	global to_name
 	to_name = ''
+	global e
+	e = NameError
+	global d
+	d = IndexError
+	global c
+	c = KeyboardInterrupt

@@ -16,14 +16,15 @@ sett.init()
 
 commands = comms.ahshklCommands.commands
 modmands = mods.modCommands.commands
-e = NameError
-d = IndexError
-c = KeyboardInterrupt
 
 def resetVars():
 	sett.done1 = False
-	success = 0
-	to_create_2 = ''
+	sett.success = 0
+	sett.to_create_1 = ''
+	sett.to_create_2 = ''
+	sett.to_create_3 = ''
+	sett.to_create_4 = ''
+	sett.to_create_5 = ''
 	to_name = ''
 
 print("Welcome to Ahshkl! Currently going through The Switch. Please read README.")
@@ -40,9 +41,11 @@ while 1:
 				sett.success = 1
 		if sett.success == 0:
 			print("Oops! That was an invalid command. Please try again after The Switch.")
-	except d:
+	except sett.e:
+		"Oops! I don't know what that means! Please try again after The Switch."
+	except sett.d:
 		pass
-	except c:
+	except sett.c:
 		sys.exit("Exited with code 0.5 (KeyboardInterrupt)")
 	resetVars()
 
