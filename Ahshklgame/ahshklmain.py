@@ -29,8 +29,7 @@ def resetVars():
 	sett.to_create_5 = ''
 	to_name = ''
 
-print("Welcome to Ahshkl! Type in help or help [command] for infor
-mation.")
+print("Welcome to Ahshkl! Type in help or help [command] for information.")
 while 1:
 	sett.command=raw_input("Enter Command: ").lower()
 	sett.command_split=sett.command.split()
