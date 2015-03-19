@@ -1,10 +1,11 @@
 import time, sys, gc
 import ahshklsettings as sett
 import assets.main.bopas.ahshklbodyparts as bopas
+import ahshklplayer as play
 
 #Created by Sebastian W.
 
-class ahshklCommands():
+class ahshklCommands(object):
 	def debug():
 		if sett.Debug == False:
 			sett.Debug = True
