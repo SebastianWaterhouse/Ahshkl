@@ -13,7 +13,7 @@ The game is created by basic shapes called body parts combining to make more com
 
 NEWS
 ====
-The Switch is done! Wooooooooooooooooooooooooooooooooo!
+Github badges are cool! Also I am now using travis-ci.
 
 Source Code Jargon
 ==================
