@@ -3,7 +3,7 @@ Ahshkl
 
 [![Join the chat at https://gitter.im/TheRambler/Ahshkl](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/TheRambler/Ahshkl?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Running Python version](https://img.shields.io/badge/Python-v2.7.8-brightgreen.svg)](https://www.python.org/)
-[![License](http://img.shields.io/Llicense-gpl2-blue.svg)](http://www.gnu.org/licenses/gpl-2.0.html)
+[![License](http://img.shields.io/License-gpl2-blue.svg)](http://www.gnu.org/licenses/gpl-2.0.html)
 
 
 Pythonic procedurally-generated object-based text-based adventure game.
