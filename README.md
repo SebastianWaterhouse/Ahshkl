@@ -31,6 +31,9 @@ T2, T3, etc.: Tier 2, Tier 3, etc.
 
 Changelog
 =========
+AHSHKL 0.0.2.0:
+The Switch complete
+
 AHSHKL 0.0.1.7.5:
 The Switch first part done. Onto the second!
 
