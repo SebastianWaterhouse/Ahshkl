@@ -27,9 +27,10 @@ def resetVars():
 	sett.to_create_3 = ''
 	sett.to_create_4 = ''
 	sett.to_create_5 = ''
+	sett.to_eval = ''
 	to_name = ''
 
-print("Welcome to Ahshkl! Type in help or help [command] for information.")
+print("You find yourself in an empty void... What do you do?")
 while 1:
 	sett.command=raw_input("Enter Command: ").lower()
 	sett.command_split=sett.command.split()
@@ -46,9 +47,10 @@ while 1:
 	except sett.e:
 		"Oops! I don't know what that means! Please file a bug report or look at help."
 	except sett.d:
-		pass
+		"Error: IndexError!"
 	except sett.c:
 		sys.exit("Exited with code 0.5 (KeyboardInterrupt)")
-	resetVars()
+	finally:
+		resetVars()
 
 print("Exited with code 0")

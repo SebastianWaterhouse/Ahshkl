@@ -20,6 +20,3 @@ class bodyPart(object):
 		return self.bID
 	def get_size_unit(self):
 		return self.size_unit
-
-cube = bodyPart("cube", "cube", "1", "UNSET")
-sphere = bodyPart("sphere", "sphere", "1", "UNSET")

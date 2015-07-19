@@ -6,5 +6,5 @@ def findall(directoryname=".assets/mods"):
 	end = '.py'
 	for root, dirs, files in os.walk(directoryname):
 	    for name in files:
-	    	if 
+	    	if
 	        print(os.path.join(root, name))

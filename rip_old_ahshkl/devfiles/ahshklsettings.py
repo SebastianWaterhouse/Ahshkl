@@ -6,14 +6,12 @@ import assets.mods
 def init():
 	global Debug
 	Debug = False
+	global to_eval
+	to_eval = ''
 	global bopa
 	bopa = bopas.bodyPart
 	global atma
 	atma = atmas.MaterialAttributes
-	global cube
-	cube = bopas.cube
-	global sphere
-	sphere = bopas.sphere
 	global mods
 	mods = assets.mods
 	global success

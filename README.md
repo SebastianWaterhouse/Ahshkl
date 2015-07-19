@@ -10,13 +10,13 @@ Pythonic procedurally-generated object-based text-based adventure game.
 
 About
 =====
-I started this project when I wanted to kill a monster in a video game by pouring cement in it's mouth.
+I started this project when I wanted to kill a monster in a video game in imaginative ways.
 
-The game is created by basic shapes called body parts combining to make more complex shapes, and so on, to make functional objects that are used in creatures/props which are used in creating scenes which progress Zork-like.
+The game is created by basic shapes called body parts combining to make more complex shapes, and so on, to make functional objects that are used in creatures/props which are used in creating scenes which progress Zork-like. Or at the very least, will in the future.
 
 NEWS
 ====
-Github badges are cool! Also I am now using travis-ci.
+REWRITING!
 
 Source Code Jargon
 ==================
@@ -36,6 +36,9 @@ T2, T3, etc.: Tier 2, Tier 3, etc.
 
 Changelog
 =========
+AHSHKL 0.0.3.0:
+Rewriting Ahshkl.
+
 AHSHKL 0.0.2.0:
 The Switch complete
 
@@ -84,6 +87,8 @@ Recipes
 More attributes
 
 Terrain generation
+
+And More
 
 
 
